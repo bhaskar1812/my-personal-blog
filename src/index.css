@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-card: #1e1e1e;
+  --color-dark: #111111;
+}
+/* Smooth transitions for dark theme layout */
+/* * {
+  @apply transition-colors duration-300;
+}
+
+body {
+  @apply bg-gray-900 text-white font-sans;
+}
+
+/* Optional custom styles */
+/* .card {
+  @apply bg-card rounded-2xl shadow-soft;
+}
+
+.hero-title {
+  @apply text-4xl font-bold mb-4;
+}
+
+.hero-text {
+  @apply text-gray-300 leading-relaxed;
+}  */
