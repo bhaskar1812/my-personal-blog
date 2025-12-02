@@ -1,7 +1,7 @@
 // import worksvg from "../assets/work.svg";
 import virtusaLogo from '../assets/virtusa.svg';
 import techMahindraLogo from '../assets/techMahindra.svg';
-import cognizantLogo from '../assets/cognizant.svg';
+import cognizantLogo from '../assets/Cognizant.svg';
 import tcsLogo from '../assets/tcs.svg';
 import accentureLogo from '../assets/accenture.svg';
 
