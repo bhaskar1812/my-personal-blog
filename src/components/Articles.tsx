@@ -18,7 +18,7 @@ export function Articles() {
   ];
 
   return (
-    <div className="space-y-10">
+    <div className="space-y-10 text-left">
       {posts.map((post, idx) => (
         <div key={idx}>
           <p className="text-gray-400 text-sm">{post.date}</p>
