@@ -1,17 +1,49 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
-@theme {
+.prose
+  :where(h2, h3):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  /* color: oklch(92% .004 286.32) */
+  color: aliceblue;
+  font-weight: 600;
+}
+.prose :where(h2):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.prose
+  :where(ul, ol):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  padding-left: 1.5rem;
+}
+.prose :where(ul):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  list-style-type: disc;
+}
+.prose :where(a):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  font-weight: 600;
+  transition-property: color, text-decoration-color;
+  transition-duration: 0.15s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.prose :where(li):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-left: 0.875rem;
+}
+/* @theme {
   --color-card: #1e1e1e;
   --color-dark: #111111;
-}
+} */
+
 /* Smooth transitions for dark theme layout */
 /* * {
   @apply transition-colors duration-300;
 }
 
-body {
+light:body {
   @apply bg-gray-900 text-white font-sans;
-}
+} */
 
 /* Optional custom styles */
 /* .card {
@@ -25,5 +57,3 @@ body {
 .hero-text {
   @apply text-gray-300 leading-relaxed;
 }  */
-
-

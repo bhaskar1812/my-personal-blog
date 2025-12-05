@@ -1,9 +1,9 @@
 // import worksvg from "../assets/work.svg";
-import virtusaLogo from '../assets/virtusa.svg';
-import techMahindraLogo from '../assets/techMahindra.svg';
-import cognizantLogo from '../assets/Cognizant.svg';
-import tcsLogo from '../assets/tcs.svg';
-import accentureLogo from '../assets/accenture.svg';
+import virtusaLogo from "../assets/virtusa.svg";
+import techMahindraLogo from "../assets/techMahindra.svg";
+import cognizantLogo from "../assets/Cognizant.svg";
+import tcsLogo from "../assets/tcs.svg";
+import accentureLogo from "../assets/accenture.svg";
 
 export function Work() {
   const work = [
@@ -45,8 +45,8 @@ export function Work() {
   ];
 
   return (
-    <div className="bg-neutral-800 p-6 rounded-xl h-fit shadow-lg text-left">
-      <h3 className="flex gap-2 text-lg font-semibold mb-4 items-center">
+    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40 self-start">
+      <h3 className="flex gap-2 text-lg font-semibold mb-6 items-center text-zinc-900 dark:text-zinc-100">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
@@ -64,15 +64,20 @@ export function Work() {
         </svg>
         Work
       </h3>
-      <ul className="space-y-4 text-gray-300">
+      <ul className="space-y-6 text-zinc-900 dark:text-zinc-100">
         {work.map((job, idx) => (
           <li key={idx} className="flex items-center justify-between gap-6">
-            <img className="bg-amber-100 rounded-full w-12 h-12 object-contain" src={job.logo} />
+            <img
+              className="dark:bg-amber-100 rounded-full w-12 h-12 object-contain "
+              src={job.logo}
+            />
             <div className="text-left flex-auto">
-            <p className="font-semibold">{job.role}</p>
-            <p className="text-sm">{job.company} - {job.city}</p>
+              <p className="font-semibold">{job.role}</p>
+              <p className="text-sm text-zinc-500 dark:text-zinc-400">
+                {job.company} - {job.city}
+              </p>
             </div>
-            <p className="text-sm">
+            <p className="text-sm text-zinc-500 dark:text-zinc-400">
               {job.period}
             </p>
           </li>
