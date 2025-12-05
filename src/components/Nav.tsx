@@ -12,8 +12,8 @@ export default function Nav({ navItems }: { navItems: NavItem[] }) {
 
   return (
     <nav className="border-b border-zinc-200 dark:border-zinc-800">
-      <div className="flex items-center justify-between p-4">
-        <div className="text-xl font-semibold"></div>
+      <div className="flex items-center justify-between">
+        {/* <div className="text-xl font-semibold"></div> */}
 
         {/* Mobile Menu Button */}
         <button
@@ -42,9 +42,9 @@ export default function Nav({ navItems }: { navItems: NavItem[] }) {
       <ul
         className={`${
           open ? "flex" : "hidden"
-        } flex-col md:flex md:flex-row gap-4 md:gap-6 p-4 md:p-0 
+        } flex-col md:flex md:flex-row gap-4 md:gap-2 
         absolute md:static left-0 w-full md:w-auto bg-white dark:bg-zinc-900 
-        border-b md:border-none border-zinc-200 dark:border-zinc-800`}
+        border-b md:border-none border-zinc-200 dark:border-zinc-800 flex md:rounded-full px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur-sm dark:text-zinc-200 dark:ring-white/10`}
       >
         {navItems.map((item) => (
           <li key={item.name} onClick={() => setOpen(!open)}>
