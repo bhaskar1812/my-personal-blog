@@ -1,3 +1,11 @@
+import reactLogo from '../assets/react.png';
+import reduxLogo from '../assets/redux.png';
+import recoilLogo from '../assets/recoil.png';
+import jsLogo from '../assets/js.png';
+import tsLogo from '../assets/typescript.png';
+import cssLogo from '../assets/css.png';
+import responsiveLogo from '../assets/responsive.png';
+
 const Expertise = () => {
   return (
     <div className="sm:px-8 mt-12 sm:mt-22">
@@ -28,7 +36,7 @@ const Expertise = () => {
                       data-nimg="1"
                       className="w-28"
                       style={{ color: "transparent" }}
-                      src="../../src/assets/react.png"
+                      src={reactLogo}
                     />
                   </div>
                 </div>
@@ -55,7 +63,7 @@ const Expertise = () => {
                       data-nimg="1"
                       className="w-28"
                       style={{ color: "transparent" }}
-                      src="../../src/assets/redux.png"
+                      src={reduxLogo}
                     />
                   </div>
                 </div>
@@ -81,7 +89,7 @@ const Expertise = () => {
                       data-nimg="1"
                       className="w-28"
                       style={{ color: "transparent" }}
-                      src="../../src/assets/recoil.png"
+                      src={recoilLogo}
                     />
                   </div>
                 </div>
@@ -107,7 +115,7 @@ const Expertise = () => {
                       data-nimg="1"
                       className="w-28"
                       style={{ color: "transparent" }}
-                      src="../../src/assets/js.png"
+                      src={jsLogo}
                     />
                   </div>
                 </div>
@@ -133,7 +141,7 @@ const Expertise = () => {
                       data-nimg="1"
                       className="w-28"
                       style={{ color: "transparent" }}
-                      src="../../src/assets/typescript.png"
+                      src={tsLogo}
                     />
                   </div>
                 </div>
@@ -159,7 +167,7 @@ const Expertise = () => {
                       data-nimg="1"
                       className="w-28"
                       style={{ color: "transparent" }}
-                      src="../../src/assets/css.png"
+                      src={cssLogo}
                     />
                   </div>
                 </div>
@@ -185,7 +193,7 @@ const Expertise = () => {
                       data-nimg="1"
                       className="w-28"
                       style={{ color: "transparent" }}
-                      src="../../src/assets/responsive.png"
+                      src={responsiveLogo}
                     />
                   </div>
                 </div>
