@@ -11,7 +11,7 @@ export default function Nav({ navItems }: { navItems: NavItem[] }) {
   const location = useLocation();
 
   return (
-    <nav className="border-b border-zinc-200 dark:border-zinc-800">
+    <nav className="">
       <div className="flex items-center justify-between">
         {/* <div className="text-xl font-semibold"></div> */}
 

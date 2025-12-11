@@ -1,21 +1,28 @@
+import Articles from "../components/Articles";
+import { useEffect, useState } from "react";
+import type { Post } from "../data/posts";
+import { posts as defaultPosts } from "../data/posts";
+import { fetchArticles } from "../lib/api";
+
 const ArticlePage = () => {
-  const posts = [
-    {
-      date: "27 November 2025",
-      title: "How I Optimized React Apps for Performance",
-      text: "A practical guide to profiling, code-splitting, caching, and UI performance tuning.",
-    },
-    {
-      date: "10 August 2025",
-      title: "My Trip to Ooty – A Peaceful Tech Detox",
-      text: "A refreshing break and what it taught me about mental clarity and productivity.",
-    },
-    {
-      date: "5 July 2025",
-      title: "Understanding Micro-frontends",
-      text: "Explaining how large companies scale UI development across teams.",
-    },
-  ];
+  const [posts, setPosts] = useState<Post[]>(defaultPosts);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    let mounted = true;
+    setLoading(true);
+    fetchArticles()
+      .then((res) => {
+        if (mounted) setPosts(res);
+      })
+      .catch((err) => console.warn(err))
+      .finally(() => mounted && setLoading(false));
+
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
   return (
     <div className="sm:px-8 mt-12 sm:mt-22">
       <div className="space-y-10 text-left mx-20">
@@ -42,9 +49,9 @@ const ArticlePage = () => {
               className="pointer-events-none absolute top-1/2 left-3 size-5 -translate-y-1/2 text-gray-400"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               ></path>
             </svg>
             <input
@@ -58,31 +65,15 @@ const ArticlePage = () => {
         <div className="mt-16 sm:mt-20">
           <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
             <div className="flex max-w-3xl flex-col space-y-16">
-              {posts.map((post, idx) => (
-                <article
-                  className="md:grid md:grid-cols-4 md:items-baseline"
-                  key={idx}
-                >
-                  <time
-                    className="mt-1 md:block relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500"
-                    dateTime="2025-11-23T16:05:25.711Z"
-                  >
-                    {post.date}
-                  </time>
-                  {/* <p className="text-gray-400 text-sm">{post.date}</p> */}
-                  <div className="md:col-span-3 group relative flex flex-col items-start">
-                    <h3 className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
-                      {post.title}
-                    </h3>
-                    <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-                      {post.text}
-                    </p>
-                    <a className="text-amber-400 mt-2 inline-block cursor-pointer">
-                      Read article →
-                    </a>
-                  </div>
-                </article>
-              ))}
+              {loading ? (
+                <div className="text-sm text-zinc-500">Loading articles…</div>
+              ) : (
+                <Articles
+                  posts={posts}
+                  itemClassName="md:grid md:grid-cols-4 md:items-baseline"
+                  className="w-full"
+                />
+              )}
             </div>
           </div>
         </div>

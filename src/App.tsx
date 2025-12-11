@@ -5,6 +5,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import { Header } from "./components/Header";
 import ArticlePage from "./pages/ArticlePage";
+import ArticleDetail from "./pages/ArticleDetail";
+import AdminCreateArticle from "./pages/AdminCreateArticle";
 import Projects from "./pages/Projects";
 import Footer from "./components/Footer";
 import Expertise from "./pages/Expertise";
@@ -24,6 +26,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/articles" element={<ArticlePage />} />
+          <Route path="/articles/:slug" element={<ArticleDetail />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/expertise" element={<Expertise />} />
           <Route path="/gear" element={<Gear />} />
@@ -32,6 +35,7 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-use" element={<Terms />} />
           <Route path="/credits" element={<Credits />} />
+          <Route path="/admin/new" element={<AdminCreateArticle />} />
         </Routes>
         <Footer />
       </BrowserRouter>

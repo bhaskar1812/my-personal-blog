@@ -28,7 +28,9 @@ const Footer = () => {
                         to={item.path}
                         className={({ isActive }) =>
                           `hover:text-amber-600 dark:hover:text-amber-500 ${
-                            isActive ? "text-amber-500" : "text-gray-300"
+                            isActive
+                              ? "text-amber-500"
+                              : "dark:text-gray-300 text-zinc-800"
                           }`
                         }
                       >
@@ -36,7 +38,7 @@ const Footer = () => {
                       </NavLink>
                     ))}
                   </div>
-                  <p className="text-sm text-zinc-500 dark:text-zinc-400">
+                  <p className="text-sm text-zinc-800 dark:text-gray-300">
                     © 2025 Bhaskar Bollampalli. All rights reserved.
                   </p>
                 </div>

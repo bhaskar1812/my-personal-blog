@@ -43,8 +43,8 @@ const Projects = () => {
                 </a>
               </h2>
               <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-                A mini microservices project created using NextJS, Strapi, and
-                Remark42.
+                A mini microservices project created using ReactJS, Tailwind,
+                and Supabase.
               </p>
               <p className="dark: relative z-10 mt-6 flex text-sm font-medium text-amber-700 transition dark:text-amber-500">
                 <svg

@@ -1,8 +1,5 @@
 import prfilepic from "../assets/profile-pic.jpg";
-import github from "../assets/github.svg";
-import linkedin from "../assets/linkedin.svg";
-import twitter from "../assets/x_twitter.svg";
-import facebook from "../assets/facebook.svg";
+import { SocialLinks } from "../components/SocialLinks";
 
 const About = () => {
   return (
@@ -59,68 +56,7 @@ const About = () => {
             className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
           />
         </div>
-        <div className="mt-16">
-          <ul>
-            <li className="mt-4 flex">
-              <a
-                target="blank"
-                className="group flex text-sm font-medium text-zinc-800 transition hover:text-amber-700 dark:text-zinc-200 dark:hover:text-amber-500"
-                href="https://github.com/bhaskar1812"
-              >
-                <img
-                  className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-amber-500"
-                  src={github}
-                />
-                <span className="ml-4">Check out me code on GitHub</span>
-              </a>
-            </li>
-            <li className="mt-4 flex">
-              <a
-                target="blank"
-                className="group flex text-sm font-medium text-zinc-800 transition hover:text-amber-700 dark:text-zinc-200 dark:hover:text-amber-500"
-                href="https://www.linkedin.com/in/bhaskar-bollampalli-b73b44106/"
-              >
-                <img
-                  className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-amber-500"
-                  src={linkedin}
-                />
-                <span className="ml-4">Connect with me on LinkedIn</span>
-              </a>
-            </li>
-            {/* <li className="mt-4 flex">
-              <a className="group flex text-sm font-medium text-zinc-800 transition hover:text-amber-700 dark:text-zinc-200 dark:hover:text-amber-500">
-                <img className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-amber-500" src={} />
-                <span className="ml-4">Follow him on Twitter</span>
-              </a>
-            </li> */}
-            <li className="mt-4 flex">
-              <a
-                target="blank"
-                className="group flex text-sm font-medium text-zinc-800 transition hover:text-amber-700 dark:text-zinc-200 dark:hover:text-amber-500"
-                href="https://m.facebook.com/b.bhaskargoud/"
-              >
-                <img
-                  className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-amber-500"
-                  src={facebook}
-                />
-                <span className="ml-4">Follow me on Facebook</span>
-              </a>
-            </li>
-            <li className="mt-4 flex">
-              <a
-                target="blank"
-                className="group flex text-sm font-medium text-zinc-800 transition hover:text-amber-700 dark:text-zinc-200 dark:hover:text-amber-500"
-                href="https://x.com/bhaskargoud22"
-              >
-                <img
-                  className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-amber-500"
-                  src={twitter}
-                />
-                <span className="ml-4">Fallow me on X</span>
-              </a>
-            </li>
-          </ul>
-        </div>
+        <SocialLinks className="flex-col mt-14" labelVisible={true} />
       </div>
     </div>
   );
