@@ -23,7 +23,7 @@ export function Articles({
   onRead,
 }: ArticlesProps) {
   const [posts, setPosts] = useState<Post[]>(localPosts);
-  const [loading, setLoading] = useState(false);
+  const [, setLoading] = useState(false);
 
   useEffect(() => {
     let mounted = true;

@@ -90,6 +90,7 @@ const AdminCreateArticle = () => {
         .insert([payload])
         .select();
       if (error) {
+        console.log(data);
         setMessage(String(error.message));
       } else {
         setMessage("Article created.");

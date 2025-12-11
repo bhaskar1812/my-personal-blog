@@ -22,8 +22,8 @@ export function SocialLinks({
   links,
   labelVisible = false,
   className = "",
-  imgClassName = "h-6 w-6 hover:text-white",
-}: SocialLinksProps) {
+}: //imgClassName = "h-6 w-6 hover:text-white",
+SocialLinksProps) {
   const defaultLinks: LinkItem[] = [
     {
       href: "https://github.com/bhaskar1812",
