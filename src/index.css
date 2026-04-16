@@ -12,6 +12,10 @@
   color: #9f9fa9;
   margin-top: 1rem;
 }
+.prose :where(ul li):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  /* color: oklch(92% .004 286.32) */
+  color: #9f9fa9;
+}
 .prose :where(h2):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
   margin-top: 5rem;
   font-size: 1.25rem;
