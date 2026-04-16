@@ -30,27 +30,28 @@ export const posts: Post[] = [
   slug: "concurrent-rendering",
   excerpt:
     "Allows React to prioritize and manage rendering tasks more intelligently.",
-  content:
-    "&lt;h2&gt;Key Benefits&lt;/h2&gt;" +
-    "&lt;p&gt;React 18 introduces Concurrent Rendering, which allows React to pause, interrupt, or prioritize rendering work to keep user interactions smooth and responsive.&lt;/p&gt;" +
+  content: `
+    <h2>Key Benefits</h2>
+    <p>React 18 introduces Concurrent Rendering, which allows React to pause, interrupt, or prioritize rendering work to keep user interactions smooth.</p>
 
-    "&lt;h2&gt;Improved Responsiveness&lt;/h2&gt;" +
-    "&lt;p&gt;React can keep the UI responsive even during expensive rendering tasks. For example, user input remains fluid in forms with complex validations or heavy state updates.&lt;/p&gt;" +
+    <h2>Improved Responsiveness</h2>
+    <p>User input remains fluid in forms with complex validations or heavy rendering tasks.</p>
 
-    "&lt;h2&gt;Automatic Batching&lt;/h2&gt;" +
-    "&lt;p&gt;Multiple state updates occurring within the same event loop are automatically batched together, reducing unnecessary re-renders and improving overall application performance.&lt;/p&gt;" +
+    <h2>Automatic Batching</h2>
+    <p>React batches multiple state updates automatically, reducing unnecessary re-renders.</p>
 
-    "&lt;h2&gt;Transitions API&lt;/h2&gt;" +
-    "&lt;p&gt;Using the startTransition API, developers can mark non-urgent updates so React can prioritize more critical interactions. This is useful for background updates such as rendering large lists while users continue interacting with the UI.&lt;/p&gt;" +
+    <h2>Transitions API</h2>
+    <p>The startTransition API allows marking non-urgent updates so React can prioritize critical interactions.</p>
 
-    "&lt;h2&gt;Enhanced Suspense&lt;/h2&gt;" +
-    "&lt;p&gt;React 18 enhances Suspense for better asynchronous data handling by allowing developers to display fallback content, such as loading indicators, while specific parts of the UI are still loading.&lt;/p&gt;" +
+    <h2>Enhanced Suspense</h2>
+    <p>Suspense improves async data handling by showing fallback UI during loading states.</p>
 
-    "&lt;h2&gt;Streaming Server-Side Rendering&lt;/h2&gt;" +
-    "&lt;p&gt;With streaming SSR, HTML is sent to the client in chunks. This enables important parts of the page to render earlier while the server continues processing the remaining content, improving perceived load times.&lt;/p&gt;" +
+    <h2>Streaming Server-Side Rendering</h2>
+    <p>HTML is streamed to the client in chunks for faster perceived page load times.</p>
 
-    "&lt;h2&gt;Conclusion&lt;/h2&gt;" +
-    "&lt;p&gt;Concurrent Rendering in React 18 helps build more responsive and efficient web applications. By prioritizing user interactions and handling heavy rendering workloads intelligently, it significantly enhances the overall user experience.&lt;/p&gt;"
+    <h2>Conclusion</h2>
+    <p>Concurrent Rendering helps build responsive and efficient web applications under heavy workloads.</p>
+  `
 },
   {
     id: "understanding-micro-frontends",
